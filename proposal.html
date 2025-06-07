@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Question</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    let clickCount = 0;
+    function moveButton(btn) {
+      clickCount++;
+      if (clickCount < 4) {
+        const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+        btn.style.position = "absolute";
+        btn.style.left = `${x}px`;
+        btn.style.top = `${y}px`;
+      } else {
+        window.location.href = 'special_message.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    <h1>Will You Marry Me?</h1>
+   <p>
+My love, as I sit here reflecting on every moment we’ve shared together, I am overwhelmed by a flood of emotions. Every laugh, every tear, every conversation, every dream we’ve spoken aloud, and every silent understanding between us has built a story more beautiful than I ever imagined. You have filled my life with so much color and meaning, and every single heartbeat echoes with the desire to build a future by your side. I promise to stand beside you through every sunrise and every storm, to be your partner in every challenge, and to be your greatest supporter in every success. Will you choose to walk this path of love with me, hand in hand, forever?
+</p>
+
+    <button onclick="moveButton(this)">Yes, I Do!</button>
+  </div>
+  <script src="particles-config.js"></script>
+</body>
+</html>
